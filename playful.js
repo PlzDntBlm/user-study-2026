@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // 2. Add random text on clicks
-  const facts = ["give cat food", "trash", "h", "scrach", "where is the bin"];
+  const facts = ["give dog food", "trash", "h", "scrach", "where is the bin"];
 
   document.body.addEventListener("click", (e) => {
     // Create a temporary speech bubble
@@ -48,7 +48,60 @@ document.addEventListener("DOMContentLoaded", () => {
                 0% { opacity: 1; transform: translateY(0); }
                 100% { opacity: 0; transform: translateY(-50px); }
             }
+            .wobble-text {
+                animation: wobble 2s infinite ease-in-out;
+                display: inline-block;
+            }
+            @keyframes wobble {
+                0%, 100% { transform: rotate(-5deg); }
+                50% { transform: rotate(5deg); }
+            }
         `;
     document.head.appendChild(pStyle);
+  }
+
+  // 3. Konami Code for a giant bouncing raccoon
+  let konamiCode = [
+    "ArrowUp",
+    "ArrowUp",
+    "ArrowDown",
+    "ArrowDown",
+    "ArrowLeft",
+    "ArrowRight",
+    "ArrowLeft",
+    "ArrowRight",
+    "b",
+    "a",
+  ];
+  let konamiIndex = 0;
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === konamiCode[konamiIndex]) {
+      konamiIndex++;
+      if (konamiIndex === konamiCode.length) {
+        konamiIndex = 0;
+        triggerGiantRaccoon();
+      }
+    } else {
+      konamiIndex = 0;
+    }
+  });
+
+  function triggerGiantRaccoon() {
+    const bigBoi = document.createElement("div");
+    bigBoi.innerHTML = "🦝";
+    bigBoi.style.position = "fixed";
+    bigBoi.style.fontSize = "15rem";
+    bigBoi.style.left = "50%";
+    bigBoi.style.top = "50%";
+    bigBoi.style.transform = "translate(-50%, -50%)";
+    bigBoi.style.zIndex = "10000";
+    bigBoi.style.animation =
+      "floatUp 3s ease-out forwards, wobble 0.5s infinite";
+    document.body.appendChild(bigBoi);
+
+    setTimeout(() => {
+      bigBoi.remove();
+    }, 3000);
   }
 });

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trash Simulator - Raccoon Paradise</title>
+  </head>
+  <body>
+    <header>
+      <h1>trash simulator</h1>
+      <nav>
+        <a href="index.html">main</a> | <a href="about.html">info</a> |
+        <a href="gallery.html">pics</a> | <a href="trash.html">trash game</a>
+      </nav>
+    </header>
+    <main>
+      <h2>find the best trash!</h2>
+      <p>click the garbage cans to see what u find.</p>
+      <div
+        id="trash-area"
+        style="
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          margin-top: 40px;
+          font-size: 4rem;
+        "
+      >
+        <div class="bin" style="cursor: pointer; transition: transform 0.1s">
+          🗑️
+        </div>
+        <div class="bin" style="cursor: pointer; transition: transform 0.1s">
+          🗑️
+        </div>
+        <div class="bin" style="cursor: pointer; transition: transform 0.1s">
+          🗑️
+        </div>
+      </div>
+      <p
+        id="trash-result"
+        style="
+          margin-top: 30px;
+          font-size: 1.5rem;
+          font-weight: bold;
+          min-height: 2em;
+          color: #ffaa00;
+        "
+      ></p>
+    </main>
+    <script src="theme.js"></script>
+    <script src="playful.js"></script>
+    <script src="trash.js"></script>
+  </body>
+</html>

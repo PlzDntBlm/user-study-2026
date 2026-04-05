@@ -58,6 +58,69 @@ const applyStyles = () => {
             background: #444;
             border-radius: 10px;
         }
+
+        /* New styles for footer and extra sections */
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #1a1a1a;
+            border-top: 2px solid #555;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .raccoon-facts-container {
+            background-color: #2a2a2a;
+            border: 2px dashed #ffaa00;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .raccoon-facts-container h3 {
+            color: #ffaa00;
+            margin-top: 0;
+        }
+
+        .guestbook-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 25px;
+            background: #252525;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #444;
+        }
+
+        .guestbook-form label {
+            font-weight: bold;
+            color: #dcdcdc;
+        }
+
+        .guestbook-form input, .guestbook-form textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #555;
+            background: #111;
+            color: #fff;
+            font-family: inherit;
+        }
+
+        .guestbook-form button {
+            padding: 10px 20px;
+            background: #88ccff;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .guestbook-form button:hover {
+            background: #ffaa00;
+        }
     `;
   document.head.appendChild(style);
 };
