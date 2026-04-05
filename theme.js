@@ -3,7 +3,7 @@ const applyStyles = () => {
   style.innerHTML = `
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
-            background-color: #2b2b2b;
+            background-color: #000000;
             color: #f1f1f1;
             margin: 0;
             padding: 20px;
