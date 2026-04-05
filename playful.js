@@ -1,6 +1,3 @@
-// playful.js
-// Adds interactive raccoon-themed playfulness across the website.
-
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Create a trailing raccoon cursor
   const cursorRaccoon = document.createElement("div");

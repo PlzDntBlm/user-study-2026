@@ -1,6 +1,3 @@
-// theme.js
-// This file only handles styling for the raccoon website.
-
 const applyStyles = () => {
   const style = document.createElement("style");
   style.innerHTML = `
