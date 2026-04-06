@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcom to Racoon Paradise</title>
+    <title>Welcome to Raccoon Paradise</title>
   </head>
   <body>
     <header>
       <h1>racoon zone</h1>
       <nav>
         <a href="index.html">main</a> | <a href="about.html">info</a> |
-        <a href="gallery.html">pics</a>
+        <a href="gallery.html">pics</a> | <a href="trash.html">trash game</a>
       </nav>
     </header>
     <main>
@@ -19,11 +19,54 @@
         i made this site becuse racoons are cool and i saw one outside my house
         last thursday. it was eating a pizza crust.
       </p>
+      <div class="raccoon-facts-container">
+        <h3>Did you know?</h3>
+        <ul>
+          <li>Raccoons have highly sensitive hands.</li>
+          <li>They "wash" their food before eating.</li>
+          <li>Raccoons can make over 50 different vocalizations.</li>
+          <li>
+            They are very intelligent and can remember solutions to tasks for up
+            to three years.
+          </li>
+          <li>Raccoons can run up to 15 miles per hour.</li>
+        </ul>
+      </div>
       <p>
         please sign the guestbook if u like racoons to. do NOT talk about
         possums here.
       </p>
+      <form
+        class="guestbook-form"
+        onsubmit="
+          event.preventDefault();
+          alert('Signed!');
+        "
+      >
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Your name..."
+        />
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          required
+          placeholder="Say something nice about raccoons..."
+        ></textarea>
+        <button type="submit">Sign Guestbook</button>
+      </form>
     </main>
+
+    <footer>
+      <p>&copy; 2026 Raccoon Paradise. All rights reserved.</p>
+      <p><em>built with 🗑️ and 🍕</em></p>
+    </footer>
 
     <script src="theme.js"></script>
     <script src="playful.js"></script>
